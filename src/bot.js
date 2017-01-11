@@ -12,7 +12,7 @@ bot.on('ready', () => {
   console.log('I am ready!');
 });
 
-bot.login("MjYwNDEzNDM5NTIzMDI4OTky.CzmAdA.k-Bl1xKvIHsJq76G20-OxISFwpw");
+bot.login("TOKEN");
 
 function handleMessage(msg) {
 	if (msg.content.toLowerCase() == "!serve") {
