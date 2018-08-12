@@ -1,7 +1,10 @@
 var raffle = require("./raffle.js");
+var ce = require("./count_emojis.js")
 
 module.exports = {
-
+	count_emojis : function(msg, amount) {
+		ce.count_emojis(msg, amount);
+	},
 	serve : function(msg) {
 		var members = msg.channel.members;
 		var serverer = msg.author.username;

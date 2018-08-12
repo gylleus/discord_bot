@@ -12,7 +12,7 @@ bot.on('ready', () => {
   console.log('I am ready!');
 });
 
-bot.login("TOKEN");
+bot.login("MjYwNDEzNDM5NTIzMDI4OTky.DlHxow.zQpAHrJn8Y4DbUjpaO0ELumXr0A");
 
 function handleMessage(msg) {
 	if (msg.content.toLowerCase() == "!serve") {
@@ -36,5 +36,13 @@ function handleMessage(msg) {
     }
     if (msg.content.toLowerCase() == "!cookies") {
     	funcs.cookies(msg, time, cookies);
-    }
+	}
+	if (msg.content.startsWith("!emoji_count")) {
+		var args = msg.content.split(' ');
+		var amount = 100;
+		if (args.length == 2) {
+    		amount = parseInt(args[1]) || 100;
+		}
+		funcs.count_emojis(msg, amount);
+	}
 }
