@@ -12,7 +12,12 @@ bot.on('ready', () => {
   console.log('I am ready!');
 });
 
-bot.login("");
+if (process.argv.length != 3) {
+       console.log("Invalid number of arguments. Please provide bot token only.");
+       return;
+}
+var token = process.argv[2];
+bot.login(token);
 
 function handleMessage(msg) {
 	if (msg.content.toLowerCase() == "!serve") {

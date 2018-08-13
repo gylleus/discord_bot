@@ -1,5 +1,3 @@
-Q = require('q');
-
 module.exports = {
     count_emojis : function (msg, messageCount) {
         var emojiCounter = new Map();
